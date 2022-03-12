@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Traveller</title>
+</head>
+
+<body>
+    <header class="header-top">
+        <h2 class="header-title"><a href="">Traveller</a></h2>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Hotéis</a></li>
+                <li><a href="">Explorar</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="general">
+        <div class="left">
+            <div class="text">
+                <h1 class="h1-colored">Cadastre aqui</h1><br>
+                <h1> um ponto turístico </h1>
+                <h3>e ajude outros turistas a serem felizes. :)</h3>
+            </div>
+            <form action="">
+                <div class="top-inputs-from-left">
+                    <div class="linha">
+                        <label for="name" class="half">Nome</label>
+                        <label for="url" class="half">Site</label>
+                    </div>
+                    <div class="linha">
+                        <input type="text" id="name" class="half" autofocus>
+                        <input type="url" id="url" placeholder="Opcional" class="half">
+                    </div>
+
+                    <div class="linha">
+                        <label for="telephone" class="half">Telefone</label>
+                        <label for="time" class="half">Horários (início - fim)</label>
+                    </div>
+                    <div class="linha">
+                        <input type="text" id="telephone" class="half">
+                        <input type="time" id="time" class="time mid-half">
+                        <input type="time" class="time mid-half">
+                    </div>
+                </div>
+                <div class="bottom-inputs-from-left">
+                    <div class="half-space">
+                        <div class="linha">
+                            <label for="description">Descrição</label>
+                        </div>
+                        <div class="linha">
+                            <textarea id="description" placeholder="Descrição do local"></textarea>
+                        </div>
+                        <div class="linha linha-botao-arquivo">
+                            <label for="photo"></label>
+                                <button onclick="document.getElementById('photo').click()">Enviar imagens</button>
+                            <input type='file' id="photo" accept="image/png, image/jpg, image/jpeg" multiple style="display:none">
+                            <!-- <input type="file" id="photo" accept="image/png, image/jpg, image/jpeg" multiple> -->
+                        </div>
+                    </div>
+                    <!-- a queridona -->
+                    <div class="line"></div>
+
+                    <div class="half-space half-space-right">
+                        <!-- <div class="linha">
+                            <p>Informações extras</p>
+                        </div> -->
+                        <div class="linha linha-margin-bottom">
+                            <div class="yes-no-option">
+                                <label class="radio-label">Ingresso:</label>
+                                <div class="radio-options">
+                                    <input type="radio" name="ingresso" id="yes-ticket"> <label for="yes-ticket"> Sim </label>
+                                    <input type="radio" name="ingresso" id="no-ticket"> <label for="no-ticket"> Não </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="linha linha-margin-bottom">
+                            <label for="cost">Valor:</label>
+                            <input type="number" id="cost" min="0">
+                        </div>
+                        <div class="linha">
+                            <div class="yes-no-option">
+                                <label class="radio-label">Comércio local:</label>
+                                <div class="radio-options">
+                                    <input type="radio" name="comercio" id="yes-shop"> <label for="yes-shop"> Sim </label>
+                                    <input type="radio" name="comercio" id="no-shop"> <label for="no-shop"> Não </label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+        </div>
+        <div class="right">
+            <div class="image"></div>
+
+            <div class="right-inputs">
+                <div class="linha right-linha">
+                    <label for="address" class="address">Endereço</label>
+                    <label for="address-number">Número</label>
+                </div>
+                <div class="linha">
+                    <input type="text" name="" id="address" class="address">
+                    <input type="number" id="address-number" min="1">
+                </div>
+                <div class="linha">
+                    <label for="uf" class="uf">UF</label>
+                    <label for="city" class="city">Cidade</label>
+                    <label for="neighborhood" class="neighborhood">Bairro</label>
+                </div>
+                <div class="linha">
+                    <input list="uf" id="estados" class="uf" required placeholder="Selecione">
+                    <datalist id="uf">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </datalist>
+                    <input type="text" id="city" class="city">
+                    <input type="text" id="neighborhood" class="neighborhood">
+                </div>
+            </div>
+            <div class="linha linha-botao">
+                <button type="submit">Enviar</button>
+            </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
